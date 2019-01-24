@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         Vector2 movement = new Vector2(moveHorizontal, 0);
         rb2d.AddForce(movement * speed);
 
-        if(Input.GetKeyDown(KeyCode.LeftShift) && grounded == true){
+        if(Input.GetKeyDown(KeyCode.Space) && grounded == true){
             rb2d.AddForce(new Vector2(0, jumpForce));
         }
     }
