@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     private bool grounded = true;
 
-
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -29,13 +28,13 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.name == "Ground"){
+        if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal)){
             grounded = true;
         }
     }
 
     void OnCollisionExit2D(Collision2D collision){
-        if(collision.gameObject.name == "Ground"){
+        if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal)){
             grounded = false;
         }
     }
