@@ -30,8 +30,11 @@ public class Weapon : MonoBehaviour
             }
             else if (Input.GetMouseButtonDown(1))
             {
-                player.transform.position = lastProjectile.transform.position;
-                Destroy(lastProjectile);
+                if (lastProjectile != null)
+                {
+                    player.transform.position = lastProjectile.transform.position;
+                    Destroy(lastProjectile);
+                }
             }
         }
         else
