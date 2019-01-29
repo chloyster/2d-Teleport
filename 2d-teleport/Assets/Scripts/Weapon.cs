@@ -7,9 +7,11 @@ public class Weapon : MonoBehaviour
     public float offset;
 
     public GameObject projectile;
+    public GameObject player;
     public Transform shotPoint;
 
     private float timeBtwnShots;
+    private GameObject lastProjectile;
     public float startTimeBtwShots;
 
     // Update is called once per frame
@@ -23,12 +25,12 @@ public class Weapon : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Instantiate(projectile, shotPoint.position, transform.rotation);
+                lastProjectile = Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwnShots = startTimeBtwShots;
             }
             else if (Input.GetMouseButtonDown(1))
             {
-                int doNothing = 0;
+                player.transform.position = lastProjectile.transform.position;
             }
         }
         else

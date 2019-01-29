@@ -126,6 +126,7 @@ MonoBehaviour:
   offset: 0
   projectile: {fileID: 2425432634981138423, guid: f6b4dfbb52db346b8a02c079ae1d4e9f,
     type: 3}
+  player: {fileID: 4654358167388703357}
   shotPoint: {fileID: 4654358165849397210}
   startTimeBtwShots: 0
 --- !u!1 &4654358167388703357
