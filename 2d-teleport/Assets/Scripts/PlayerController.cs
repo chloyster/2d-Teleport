@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float extraGravity;
     private bool grounded = true;
+    private int surfacesTouching = 0;
 
     private void Start()
     {
@@ -28,24 +29,23 @@ public class PlayerController : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(h * strafeSpeed, rb2d.velocity.y);
 
-        if(Input.GetKeyDown(KeyCode.Space) && grounded == true){
+        if(Input.GetKeyDown(KeyCode.Space) && grounded){
             rb2d.AddForce(new Vector2(0, jumpForce));
         }
-        if (grounded == false)
-        {
-            rb2d.AddForce(new Vector2(0, -extraGravity));
-        }
+        rb2d.AddForce(new Vector2(0, -extraGravity));
     }
 
     void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal)){
+            surfacesTouching++;
             grounded = true;
         }
     }
 
     void OnCollisionExit2D(Collision2D collision){
         if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal)){
-            grounded = false;
+            surfacesTouching--;
+            grounded = surfacesTouching > 0;
         }
     }
 }
