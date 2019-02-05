@@ -126,9 +126,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 519420032}
-  - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
+  - component: {fileID: 139232373}
+  - component: {fileID: 139232376}
+  - component: {fileID: 139232375}
+  - component: {fileID: 139232374}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -136,21 +137,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
+--- !u!4 &139232373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139232372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 612177917}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &139232374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139232372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eef8d8a74474c58a02d73e4f0f4bdc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  magnitude: 0
+--- !u!81 &139232375
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
+  m_GameObject: {fileID: 139232372}
   m_Enabled: 1
---- !u!20 &519420031
+--- !u!20 &139232376
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
+  m_GameObject: {fileID: 139232372}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
@@ -282,8 +310,63 @@ PrefabInstance:
       propertyPath: extraGravity
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4654358166175279958, guid: f46b0c7d0fd896249ac49f451ac481bc,
+        type: 3}
+      propertyPath: cameraShake
+      value:
+      objectReference: {fileID: 139232374}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f46b0c7d0fd896249ac49f451ac481bc, type: 3}
+--- !u!1 &612177915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 612177917}
+  - component: {fileID: 612177916}
+  m_Layer: 0
+  m_Name: Camera Follow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &612177916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612177915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb43fd5ad3f284b208fb2f22e65c3f10, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  xMargin: 2
+  yMargin: 2
+  xSmooth: 2
+  ySmooth: 2
+  maxXAndY: {x: 5, y: 5}
+  minXAndY: {x: -5, y: -5}
+--- !u!4 &612177917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612177915}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 139232373}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1144462453
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,14 +427,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   version: 1
   data:
     dataString: UEsDBBQAAAgIAACAn+veIJ82SQIAAPAEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VEtz2jAQ/iuMzqUDDpCmtxYI6YGQCe3k4ossrbEGWfLoER4Z/ntXso0dZnJi2e/b3W8f8gcRylbAnDYrI/hacyA/ByTY5NugA5/gSHdabcUZWs6b4K4IJBo5r9QJjf5xCLO6BGcE+6V2MpBH6PRK5NqUS76DubbOojun0gJCRrsQrdD1MSBH/Bk+hJATWsl9sM5oPYwGFzQZKAemo7bEllazvGKSlhXwILkjJ0nDHtc0hc00jCCcaSmFbZQQd6pip9uqAAOhVS4oNharB3oBYle4kLYfu8lzC65RZOhpIQzOp05Kfut6aCW1+1rWO5U+lBmOo6I65/orODe6fGrLjkehhCsE27/SE6PW9Ybady8+6/bqQOWeZhLeClDPemW0VxxBZ3wI9RaSRff32tm8ALbv/LXUG6evvl5N6OESmz/OpSizAH2f1I6t1HHacfFgcC9/UHA8C9ukQG9Q8c/CX7rr308DPApjHUJNlyrIy7Q3gUqWcWahG+/m2iiI7kZ0BYpKd3rBNO52gzdYr+wN8kjDS2mKN1j7AG5Corvjj0Y30Is+XJdlC31Ygy023kmhoBMdgGec01wrVR9YfyZt2NabnLJe2M4L/vm0yGw6hRmfjLMxy+gkT4b3dz8eWDKd3WVJMs1oRuLtCYV9UvlSC23Gg1tTXXKFd9Z+QAYrQ6t47NzQw0qcS90buVC53jIDoDZ1hqtwMFgE3yRfcoED2oJzQsV9k4+USM32wNNrojR2ujw6Q9MuS0oq8a5d8KRkHr8YKbmQy39QSwMEFAAACAgAAICf67ymdiFsAAAAdwAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSM9FRUEovSizIKAYKGII4pZkpIHa0kpmpaapZiolhkmFyUqJJmpGuubGFZbKRqZlxkpGRaVJiklIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAgJ/r3iCfNkkCAADwBAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAgJ/rvKZ2IWwAAAB3AAAACQAkAAAAAAAAAAAAAACWAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAE0DAAAAAA==
-    upgradeData: 
+    upgradeData:
     file_cachedStartup: {fileID: 0}
-    data_cachedStartup: 
+    data_cachedStartup:
     cacheStartup: 0
   showNavGraphs: 1
   showUnwalkableNodes: 1
@@ -808,8 +891,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5446365ec399c88c8aae4c9d25723fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   target: {fileID: 184966924}
   updateRate: 2
   speed: 300
@@ -826,8 +909,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   version: 1
   drawGizmos: 1
   detailedGizmos: 0

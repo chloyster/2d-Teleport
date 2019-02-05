@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//From "2D Platformer" tutorial in the Asset Store, published by Unity themselves
 public class PlayerController : MonoBehaviour
 {
 
