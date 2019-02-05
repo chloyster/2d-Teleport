@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//From YouTube tutorial: https://youtu.be/9A9yj8KnM8c
 public class CameraShake : MonoBehaviour
 {
     public float magnitude = 0.0f;
 
     public IEnumerator Shake (float duration, float magnitude)
     {
+        if (Mathf.Abs(this.magnitude) < 0.001f)
+        {
+            this.magnitude = magnitude;
+        }
         Vector3 originalPos = transform.localPosition;
 
         float elapsed = 0.0f;
@@ -25,5 +30,6 @@ public class CameraShake : MonoBehaviour
         }
 
         transform.localPosition = originalPos;
+        this.magnitude = 0.0f;
     }
 }
