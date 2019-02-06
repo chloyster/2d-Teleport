@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     public GameObject projectile;
     public GameObject player;
     public Transform shotPoint;
+    public CameraShake cameraShake;
 
     private float timeBtwnShots;
     private GameObject lastProjectile;
@@ -32,6 +33,7 @@ public class Weapon : MonoBehaviour
             {
                 if (lastProjectile != null)
                 {
+                    StartCoroutine(cameraShake.Shake(.05f, .2f));
                     player.transform.position = lastProjectile.transform.position;
                     Destroy(lastProjectile);
                 }
