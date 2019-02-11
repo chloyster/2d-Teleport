@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(h * strafeSpeed, rb2d.velocity.y);
 
-        if(Input.GetKeyDown(KeyCode.Space) && grounded){
+        if(Input.GetKeyDown(KeyCode.Space) && rb2d.velocity.y == 0){
             rb2d.AddForce(new Vector2(0, jumpForce));
         }
         rb2d.AddForce(new Vector2(0, -extraGravity));
