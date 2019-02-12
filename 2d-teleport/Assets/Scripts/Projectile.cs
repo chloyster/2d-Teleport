@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public float speed = 1.0f;
     public float lifeTime = 1.5f;
+    public GameObject prevShot = null;
 
     //public GameObject destroyEffect;
     private void Start()
