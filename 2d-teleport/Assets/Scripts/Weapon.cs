@@ -18,7 +18,7 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
 
@@ -26,7 +26,9 @@ public class Weapon : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                lastProjectile = Instantiate(projectile, shotPoint.position, transform.rotation);
+                GameObject lProjectile = Instantiate(projectile, shotPoint.position, transform.rotation);
+                lProjectile.GetComponent<Projectile>().prevShot = lastProjectile;
+                lastProjectile = lProjectile;
                 timeBtwnShots = startTimeBtwShots;
             }
             else if (Input.GetMouseButtonDown(1))
@@ -35,7 +37,9 @@ public class Weapon : MonoBehaviour
                 {
                     StartCoroutine(cameraShake.Shake(.05f, .2f));
                     player.transform.position = lastProjectile.transform.position;
+                    GameObject lProjectile = lastProjectile.GetComponent<Projectile>().prevShot;
                     Destroy(lastProjectile);
+                    lastProjectile = lProjectile;
                 }
             }
         }

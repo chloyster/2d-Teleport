@@ -55,3 +55,6 @@
 
 # Crashlytics generated file
 2d-teleport/crashlytics-build.properties
+
+2d-teleport/*/*.meta
+2d-teleport/*/*/*.meta
