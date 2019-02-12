@@ -10,20 +10,18 @@ public class MovingPlatform : MonoBehaviour
     private Vector3 posB;
     private Vector3 nextPos;
 
-    [SerializeField]
-    private float speed;
 
-    [SerializeField]
-    private Transform platformToMove;   //the moving platform itself.
+    public float speed;
 
-    [SerializeField]
-    private Transform moveTowards;   //the location the platform should move to.
+    public Transform platformToMove;   //the moving platform itself.
+
+    public Transform moveTo;   //the location the platform should move to.
 
     // Start is called before the first frame update
     void Start()
     {
         posA = platformToMove.localPosition;
-        posB = moveTowards.localPosition;
+        posB = moveTo.localPosition;
         nextPos = posB;
     }
 
