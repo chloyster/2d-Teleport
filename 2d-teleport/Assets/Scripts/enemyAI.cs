@@ -116,4 +116,24 @@ public class enemyAI : MonoBehaviour
             return;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.name == "Player" && target == null)
+        {
+            target = collision.gameObject.transform;
+            StartCoroutine(UpdatePath());
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.name == "Player" && target != null)
+        {
+            rb.velocity = Vector2.zero;
+            StopCoroutine(UpdatePath());
+            target = null;
+
+        }
+    }
 }
