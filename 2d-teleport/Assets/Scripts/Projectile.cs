@@ -24,4 +24,10 @@ public class Projectile : MonoBehaviour
         //Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        DestroyProjectile();
+    }
+
 }

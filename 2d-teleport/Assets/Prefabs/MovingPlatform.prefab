@@ -177,10 +177,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4341181447986328574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 313779a53cd634950a8b3bc94b664224, type: 3}
+  m_Script: {fileID: 11500000, guid: c82b01aac77194548a43410e3b363554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 0
   platformToMove: {fileID: 4341181447842903147}
   moveTo: {fileID: 4341181447803655306}
 --- !u!50 &4341181447986328563
@@ -199,7 +199,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 00ad4f5394d64164d8c1ccf91983e004, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
