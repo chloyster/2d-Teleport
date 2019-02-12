@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //From "2D Platformer" tutorial in the Asset Store, published by Unity themselves
 public class PlayerController : MonoBehaviour
@@ -40,6 +41,10 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal)){
             surfacesTouching++;
             grounded = true;
+        }
+        if(collision.gameObject.name == "Death Zone")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
