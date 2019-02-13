@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
             surfacesTouching++;
             grounded = true;
         }
-        if(collision.gameObject.name == "Death Zone")
+        if(collision.gameObject.name == "Death Zone" || collision.gameObject.name.StartsWith("enemy"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

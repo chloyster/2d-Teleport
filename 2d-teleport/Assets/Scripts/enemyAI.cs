@@ -121,7 +121,7 @@ public class enemyAI : MonoBehaviour
     {
         if (collision.gameObject.name.StartsWith("Projectile"))
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 
