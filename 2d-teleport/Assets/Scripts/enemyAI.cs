@@ -117,6 +117,14 @@ public class enemyAI : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.StartsWith("Projectile"))
+        {
+            Destroy(this);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.name == "Player" && target == null)
