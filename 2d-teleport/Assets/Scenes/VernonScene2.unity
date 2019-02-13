@@ -1430,6 +1430,11 @@ PrefabInstance:
       propertyPath: cameraShake
       value: 
       objectReference: {fileID: 508041949}
+    - target: {fileID: 4654358167388703356, guid: f46b0c7d0fd896249ac49f451ac481bc,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f46b0c7d0fd896249ac49f451ac481bc, type: 3}
 --- !u!4 &830048484 stripped

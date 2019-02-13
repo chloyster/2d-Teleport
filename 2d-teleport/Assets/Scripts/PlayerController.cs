@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(h * strafeSpeed, rb2d.velocity.y);
 
-        if(Input.GetKeyDown(KeyCode.Space) && System.Math.Abs(rb2d.velocity.y) < EPSILON)
+        if(Input.GetKey(KeyCode.Space) && System.Math.Abs(rb2d.velocity.y) < EPSILON)
         {
             rb2d.AddForce(new Vector2(0, jumpForce));
         }
