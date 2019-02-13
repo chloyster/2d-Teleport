@@ -10,12 +10,9 @@ public class MovingPlatform : MonoBehaviour
     private Vector3 posB;
     private Vector3 nextPos;
 
-
     public float speed;
-
-    public Transform platformToMove;   //the moving platform itself.
-
-    public Transform moveTo;   //the location the platform should move to.
+    public Transform platformToMove;    //the moving platform itself.
+    public Transform moveTo;            //the location the platform should move to.
 
     // Start is called before the first frame update
     void Start()
