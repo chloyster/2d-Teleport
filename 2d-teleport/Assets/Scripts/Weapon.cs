@@ -39,6 +39,12 @@ public class Weapon : MonoBehaviour
                     AudioManager.instance.Play("TP");
                     StartCoroutine(cameraShake.Shake(.05f, .2f));
                     player.transform.position = lastProjectile.transform.position;
+                    Rigidbody2D playerrb = player.GetComponent<Rigidbody2D>();
+                    if (playerrb.velocity.y < 0)
+                    {
+                        float xVel = playerrb.velocity.x;
+                        playerrb.velocity = new Vector2(xVel, 0);
+                    }
                     GameObject lProjectile = lastProjectile.GetComponent<Projectile>().prevShot;
                     Destroy(lastProjectile);
                     lastProjectile = lProjectile;
