@@ -7,6 +7,9 @@ public class Projectile : MonoBehaviour
     public float speed = 1.0f;
     public float lifeTime = 1.5f;
     public GameObject prevShot = null;
+    public GameObject nextShot = null;
+
+    public GameObject weapon = null;
 
     //public GameObject destroyEffect;
     private void Start()
@@ -19,8 +22,20 @@ public class Projectile : MonoBehaviour
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
-    void DestroyProjectile()
+    public void DestroyProjectile()
     {
+        if (nextShot == null)
+        {
+            weapon.GetComponent<Weapon>().lastProjectile = prevShot;
+        }
+        else
+        {
+            nextShot.GetComponent<Projectile>().prevShot = prevShot;
+        }
+        if (prevShot != null)
+        {
+            prevShot.GetComponent<Projectile>().nextShot = nextShot;
+        }
         //Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

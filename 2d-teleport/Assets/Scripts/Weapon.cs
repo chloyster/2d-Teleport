@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
     public CameraShake cameraShake;
 
     private float timeBtwnShots;
-    private GameObject lastProjectile;
+    public GameObject lastProjectile;
     public float startTimeBtwShots;
 
     // Update is called once per frame
@@ -28,7 +28,14 @@ public class Weapon : MonoBehaviour
             {
                 AudioManager.instance.Play("BulletFire");
                 GameObject lProjectile = Instantiate(projectile, shotPoint.position, transform.rotation);
+                lProjectile.GetComponent<Projectile>().weapon = gameObject;
+
                 lProjectile.GetComponent<Projectile>().prevShot = lastProjectile;
+                if (lastProjectile != null)
+                {
+                    lastProjectile.GetComponent<Projectile>().nextShot = lProjectile;
+                }
+
                 lastProjectile = lProjectile;
                 timeBtwnShots = startTimeBtwShots;
             }
@@ -45,9 +52,10 @@ public class Weapon : MonoBehaviour
                         float xVel = playerrb.velocity.x;
                         playerrb.velocity = new Vector2(xVel, 0);
                     }
-                    GameObject lProjectile = lastProjectile.GetComponent<Projectile>().prevShot;
-                    Destroy(lastProjectile);
-                    lastProjectile = lProjectile;
+                    //GameObject lProjectile = lastProjectile.GetComponent<Projectile>().prevShot;
+                    //Destroy(lastProjectile);
+                    //lastProjectile = lProjectile;
+                    lastProjectile.GetComponent<Projectile>().DestroyProjectile();
                 }
             }
         }
