@@ -26,6 +26,7 @@ public class Weapon : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                AudioManager.instance.Play("BulletFire");
                 GameObject lProjectile = Instantiate(projectile, shotPoint.position, transform.rotation);
                 lProjectile.GetComponent<Projectile>().prevShot = lastProjectile;
                 lastProjectile = lProjectile;
@@ -35,6 +36,7 @@ public class Weapon : MonoBehaviour
             {
                 if (lastProjectile != null)
                 {
+                    AudioManager.instance.Play("TP");
                     StartCoroutine(cameraShake.Shake(.05f, .2f));
                     player.transform.position = lastProjectile.transform.position;
                     GameObject lProjectile = lastProjectile.GetComponent<Projectile>().prevShot;

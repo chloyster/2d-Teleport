@@ -8,13 +8,13 @@ public class NPCSpriteSwitch : MonoBehaviour
     public Sprite sprite1; // Drag your first sprite here
     public Sprite sprite2; // Drag your second sprite here
 
-    AudioSource foundSound;
+    //AudioSource foundSound;
     private SpriteRenderer spriteRenderer;
     private bool playerFound = false;
 
     void Start()
     {
-        foundSound = GetComponent<AudioSource>();
+        //foundSound = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>(); // we are accessing the SpriteRenderer that is attached to the Gameobject
         if (spriteRenderer.sprite == null) // if the sprite on spriteRenderer is null then
             spriteRenderer.sprite = sprite1; // set the sprite to sprite1
@@ -33,7 +33,8 @@ public class NPCSpriteSwitch : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             playerFound = true;
-            foundSound.Play();
+            AudioManager.instance.Play("RescuedKid");
+            //foundSound.Play();
         }
     }
 

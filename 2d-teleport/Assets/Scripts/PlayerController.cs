@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        AudioManager.instance.Play("Theme");
     }
 
 
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
         }
         if(collision.gameObject.name == "Death Zone" || collision.gameObject.name.StartsWith("enemy"))
         {
+            AudioManager.instance.Play("Die");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
