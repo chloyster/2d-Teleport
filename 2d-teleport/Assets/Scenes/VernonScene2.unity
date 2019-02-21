@@ -3062,7 +3062,7 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
-  - name: DIe
+  - name: Die
     clip: {fileID: 8300000, guid: 9e404019fea6a374985627a9cc2be171, type: 3}
     volume: 0.3
     volumeVariance: 0
