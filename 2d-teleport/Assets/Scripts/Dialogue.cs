@@ -17,7 +17,7 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        if(textDisplay.text == sentences[index])
+        if (textDisplay.text == sentences[index])
         {
             continueButton.SetActive(true);
         }
@@ -30,7 +30,7 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator Type()
     {
-        foreach(char letter in sentences[index].ToCharArray())
+        foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed); // check this
@@ -40,7 +40,7 @@ public class Dialogue : MonoBehaviour
     public void NextSentence()
     {
         continueButton.SetActive(false);
-        if(index < sentences.Length - 1)
+        if (index < sentences.Length - 1)
         {
             index++;
             textDisplay.text = "";

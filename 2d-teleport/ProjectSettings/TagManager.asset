@@ -45,3 +45,6 @@ TagManager:
   - name: Gun
     uniqueID: 2987727737
     locked: 0
+  - name: Foreground
+    uniqueID: 2412247401
+    locked: 0
