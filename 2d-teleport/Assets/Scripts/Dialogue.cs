@@ -39,17 +39,22 @@ public class Dialogue : MonoBehaviour
 
     public void NextSentence()
     {
+        Debug.Log("got to next sentence");
+
         continueButton.SetActive(false);
         if (index < sentences.Length - 1)
         {
             index++;
             textDisplay.text = "";
             StartCoroutine(Type());
+            Debug.Log("here2");
         }
         else
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
+            Debug.Log("here3");
+
         }
     }
 
