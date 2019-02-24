@@ -121,7 +121,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 57492597}
-  - component: {fileID: 57492596}
   m_Layer: 0
   m_Name: Dialogue Manager
   m_TagString: Untagged
@@ -129,25 +128,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &57492596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 57492595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29be3de7c4f004349885f5aed864099e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textDisplay: {fileID: 303513652}
-  sentences:
-  - Oh good! You're finally awake. I was worried about you.
-  - Bully knocked you out, but you're not done yet.
-  - Get your space gun and let's go!
-  typingSpeed: 0.02
-  continueButton: {fileID: 1448474312}
 --- !u!4 &57492597
 Transform:
   m_ObjectHideFlags: 0
@@ -787,7 +767,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 57492596}
+      - m_Target: {fileID: 0}
         m_MethodName: NextSentence
         m_Mode: 1
         m_Arguments:
