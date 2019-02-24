@@ -7,6 +7,7 @@ public class turretAI : MonoBehaviour
 
     private bool inSight = false;
     private Transform target;
+    public GameObject bullet;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class turretAI : MonoBehaviour
             Vector3 difference = target.transform.position - transform.position;
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
+            GameObject turrBullet = Instantiate(bullet, transform.position, transform.rotation);
         }
     }
 
@@ -31,6 +33,14 @@ public class turretAI : MonoBehaviour
         {
             inSight = true;
             target = collision.gameObject.transform;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.name == "Player")
+        {
+            inSight = false;
         }
     }
 }

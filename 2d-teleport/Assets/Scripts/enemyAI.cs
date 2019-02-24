@@ -40,7 +40,6 @@ public class enemyAI : MonoBehaviour
 
         if(target == null)
         {
-            Debug.LogError("No Player found");
             return;
         }
         //start a new path to the target position, return the result to the onpath complete method.
