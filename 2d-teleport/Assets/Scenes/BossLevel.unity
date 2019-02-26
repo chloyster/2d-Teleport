@@ -256,17 +256,17 @@ PrefabInstance:
     - target: {fileID: 4654358167388703347, guid: f46b0c7d0fd896249ac49f451ac481bc,
         type: 3}
       propertyPath: strafeSpeed
-      value: 30
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4654358167388703347, guid: f46b0c7d0fd896249ac49f451ac481bc,
         type: 3}
       propertyPath: extraGravity
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4654358167388703347, guid: f46b0c7d0fd896249ac49f451ac481bc,
         type: 3}
       propertyPath: jumpForce
-      value: 400
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 4654358166175279958, guid: f46b0c7d0fd896249ac49f451ac481bc,
         type: 3}
