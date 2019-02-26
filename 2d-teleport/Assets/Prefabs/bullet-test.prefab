@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 868946618644961997}
   - component: {fileID: 6553655613620287330}
   - component: {fileID: 1609182995029347592}
-  m_Layer: 0
+  - component: {fileID: 2156072672397674185}
+  - component: {fileID: 6119984056337661909}
+  m_Layer: 12
   m_Name: bullet-test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,3 +94,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4a5e4bdbabea2468fe69c8df2ebd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  lifeTime: 1.5
+--- !u!58 &2156072672397674185
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925483562532093182}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.08
+--- !u!50 &6119984056337661909
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925483562532093182}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
