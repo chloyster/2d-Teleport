@@ -8,10 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: d69fdf2009a2b2d4a9956b09c688313a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level2.unity
     guid: e421b60cd20ec184f9f93b0be6cab23f
+  - enabled: 1
+    path: Assets/Scenes/GabriellaScene.unity
+    guid: aab9f22d49066db4097501f5c5a636a1
+  - enabled: 1
+    path: Assets/Scenes/GabriellaScene2.unity
+    guid: dba9f1d73196fc8468f3c890613060e7
   m_configObjects: {}
