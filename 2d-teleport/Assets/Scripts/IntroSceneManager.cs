@@ -19,4 +19,7 @@ public class IntroSceneManager : MonoBehaviour
     {
         dialogueManager.SetActive(true);
     }
+
+    //note: try animating the character to stand up, then play the dialogue,
+    //      then set the player to active, then let them run
 }

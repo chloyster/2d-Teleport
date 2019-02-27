@@ -14,6 +14,7 @@ public class Dialogue : MonoBehaviour
     private int index;
 
     public GameObject continueButton;
+    public Animator runAnim;
 
     void Update()
     {
@@ -50,7 +51,7 @@ public class Dialogue : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
-
+            // all sentences have been read
         }
     }
 
