@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public static GameController control;
 
     public float health;
+    public int savedNPCs;
 
     void Awake()
     {
@@ -27,5 +28,6 @@ public class GameController : MonoBehaviour
     public void OnGUI()
     {
         GUI.Label(new Rect(10, 10, 100, 30), "Health: " + health);
+        GUI.Label(new Rect(10, 30, 100, 30), "Friends Saved: " + savedNPCs);
     }
 }
