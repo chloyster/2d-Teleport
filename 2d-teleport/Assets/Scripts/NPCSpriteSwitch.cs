@@ -43,7 +43,10 @@ public class NPCSpriteSwitch : MonoBehaviour
         if (spriteRenderer.sprite == sprite1) // if the spriteRenderer sprite = sprite1 then change to sprite2
         {
             spriteRenderer.sprite = sprite2;
-            GameController.control.savedNPCs += 1; //added 2-27
+            if (GameController.control)
+            {
+                GameController.control.savedNPCs += 1; //added 2-27
+            }
         }
         //else
         //{
