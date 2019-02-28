@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void OnGUI()
+    public void OnGUI()
     {
         GUI.Label(new Rect(10, 10, 100, 30), "Health: " + health);
     }

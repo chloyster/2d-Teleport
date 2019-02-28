@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     public float extraGravity;
     private bool grounded = true;
     private int surfacesTouching = 0;
-    public GameController gc;
 
     private readonly float EPSILON = 0.001f;
 
@@ -26,11 +25,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (gc.health <= 0)
+        if (GameController.control.health <= 0)
         {
             AudioManager.instance.Play("Die");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            gc.health = 10;
+            GameController.control.health = 10;
         }
     }
 
@@ -64,7 +63,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.name.StartsWith("bullet"))
         {
-            gc.health--;
+            GameController.control.health--;
         }
     }
 
