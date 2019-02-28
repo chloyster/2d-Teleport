@@ -249,6 +249,8 @@ MonoBehaviour:
   sentences:
   - Oh good, you're awake. I was getting worried.
   - Bully knocked you out, but you're not done yet!
+  - Keep your eye open for candy. You must keep your strength up!
+  - And remember, the others need you!
   - Get your space gun and let's go!
   typingSpeed: 0.02
   continueButton: {fileID: 1448474312}
