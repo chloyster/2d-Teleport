@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ChangeLevel : MonoBehaviour
 {
+    public int sceneToLoad;
     void OnCollisionEnter2D(Collision2D gameObjectInformation)
     {
-        Debug.Log("I'm in");
         if (gameObjectInformation.gameObject.tag == "Player")
         {
-            Debug.Log("Collision Detected");
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }

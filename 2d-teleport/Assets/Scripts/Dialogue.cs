@@ -14,7 +14,8 @@ public class Dialogue : MonoBehaviour
     private int index;
 
     public GameObject continueButton;
-    public Animator runAnim;
+    public GameObject player;
+    public GameObject wakeAnim;
 
     void Update()
     {
@@ -51,6 +52,8 @@ public class Dialogue : MonoBehaviour
         {
             textDisplay.text = "";
             continueButton.SetActive(false);
+            player.SetActive(true);
+            wakeAnim.SetActive(false);
             // all sentences have been read
         }
     }
