@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4654358167388703347}
   - component: {fileID: 6009217190426637772}
   - component: {fileID: 7609815800615625163}
+  - component: {fileID: 7279448468303095817}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -71,7 +72,7 @@ MonoBehaviour:
   strafeSpeed: 0
   jumpForce: 300
   extraGravity: 0
-  gc: {fileID: 330996328626965083, guid: b7d70fedc566dc947a469003bb363abc, type: 3}
+  animator: {fileID: 7279448468303095817}
 --- !u!212 &6009217190426637772
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -146,6 +147,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.78, y: 10.85}
   m_EdgeRadius: 0
+--- !u!95 &7279448468303095817
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4654358167388703357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83e89753f31ac3448b9048b28c6af6bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5290774106810958869
 GameObject:
   m_ObjectHideFlags: 0

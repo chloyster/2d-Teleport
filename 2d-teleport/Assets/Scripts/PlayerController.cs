@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private bool grounded = true;
     private int surfacesTouching = 0;
 
+    public Animator animator; //gabriella
+
     private readonly float EPSILON = 0.001f;
 
     private void Start()
@@ -44,7 +46,9 @@ public class PlayerController : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(h * strafeSpeed, rb2d.velocity.y);
 
-        if(Input.GetKey(KeyCode.Space) && System.Math.Abs(rb2d.velocity.y) < EPSILON)
+        animator.SetFloat("Speed", Mathf.Abs(h)); //gabriella
+
+        if (Input.GetKey(KeyCode.Space) && System.Math.Abs(rb2d.velocity.y) < EPSILON)
         {
             rb2d.AddForce(new Vector2(0, jumpForce));
         }
