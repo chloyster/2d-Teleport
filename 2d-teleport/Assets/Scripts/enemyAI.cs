@@ -10,7 +10,6 @@ public class enemyAI : MonoBehaviour
     //Health of enemy
     public float health;
 
-
     //object we are chasing
     public Transform target;
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class turretAI : MonoBehaviour
 {
+    //Health of enemy
+    public float health;
 
     private bool inSight = false;
     private Transform target;
@@ -28,6 +30,20 @@ public class turretAI : MonoBehaviour
             timer = 1.0f;
         }
         timer -= Time.deltaTime;
+
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.StartsWith("Projectile"))
+        {
+            health--;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

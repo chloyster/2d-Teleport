@@ -616,6 +616,7 @@ GameObject:
   - component: {fileID: 1954245823}
   - component: {fileID: 1954245822}
   - component: {fileID: 1954245821}
+  - component: {fileID: 1954245825}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -635,6 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6f899d2e14a4a4b9489d699e29be4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
   bullet: {fileID: 1925483562532093182, guid: b964e992e5381934eb0b99d50bfe343b, type: 3}
 --- !u!58 &1954245822
 CircleCollider2D:
@@ -714,6 +716,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1954245825
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954245820}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.13, y: 0.67}
+    newSize: {x: 1.13, y: 0.67}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.13, y: 0.67}
+  m_EdgeRadius: 0
 --- !u!1001 &2117174286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -938,6 +966,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565529985232024416, guid: 7316e6f2e4307c4458c4086898b54db0,
+        type: 3}
+      propertyPath: health
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7316e6f2e4307c4458c4086898b54db0, type: 3}
