@@ -7,6 +7,10 @@ using Pathfinding;
 public class enemyAI : MonoBehaviour
 {
 
+    //Health of enemy
+    public float health;
+
+
     //object we are chasing
     public Transform target;
 
@@ -116,11 +120,19 @@ public class enemyAI : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name.StartsWith("Projectile"))
         {
-            Destroy(gameObject);
+            health--;
         }
     }
 
