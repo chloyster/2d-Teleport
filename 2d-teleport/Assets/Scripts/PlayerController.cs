@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(h * strafeSpeed, rb2d.velocity.y);
 
-        animator.SetFloat("Speed", Mathf.Abs(h)); //gabriella
+        animator.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x)); //gabriella
 
         if (Input.GetKey(KeyCode.Space) && System.Math.Abs(rb2d.velocity.y) < EPSILON)
         {
