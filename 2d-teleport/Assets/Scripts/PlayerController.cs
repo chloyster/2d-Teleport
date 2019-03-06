@@ -22,8 +22,30 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        AudioManager.instance.Play("Theme");
         canJump = true;
+
+        AudioManager.instance.StopAllSounds();
+
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "1Gabriella":
+                break;
+            case "2Vernon":
+                AudioManager.instance.Play("Theme");
+                break;
+            case "3Dayton":
+                AudioManager.instance.Play("Theme2");
+                break;
+            case "3.5SecretLevel":
+                AudioManager.instance.Play("Theme2.5");
+                break;
+            case "4Chris":
+                AudioManager.instance.Play("FinalBossTheme");
+                break;
+            default:
+                AudioManager.instance.Play("Theme");
+                break;
+        }
     }
 
 

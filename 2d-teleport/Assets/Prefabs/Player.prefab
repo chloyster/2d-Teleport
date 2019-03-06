@@ -377,4 +377,4 @@ MonoBehaviour:
   cameraShake: {fileID: 6032538006333978827, guid: 6f521c0f2b7a9894f807ef5561dd02ef,
     type: 3}
   lastProjectile: {fileID: 0}
-  startTimeBtwShots: 0
+  startTimeBtwShots: 0.5
