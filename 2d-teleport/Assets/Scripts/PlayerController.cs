@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float extraGravity;
     private bool grounded = true;
+    private bool canJump;
     private int surfacesTouching = 0;
 
     public Animator animator; //gabriella
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         AudioManager.instance.Play("Theme");
+        canJump = true;
     }
 
 
@@ -48,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x)); //gabriella
 
-        if (Input.GetKey(KeyCode.Space) && System.Math.Abs(rb2d.velocity.y) < EPSILON)
+        if (Input.GetKey(KeyCode.Space) && System.Math.Abs(rb2d.velocity.y) < EPSILON && canJump)
         {
             rb2d.AddForce(new Vector2(0, jumpForce));
         }
@@ -56,9 +58,14 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-        if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal)){
-            surfacesTouching++;
-            grounded = true;
+        if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal) || collision.gameObject.CompareTag("Ground")){
+            //surfacesTouching++;
+            //grounded = true;
+            Vector3 contactPoint = collision.contacts[0].point;
+            Vector3 center = collision.collider.bounds.center;
+            if(contactPoint.y < center.y){
+                canJump = false;
+            }
         }
         if(collision.gameObject.name == "Death Zone" || collision.gameObject.name.StartsWith("enemy"))
         {
@@ -72,9 +79,11 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnCollisionExit2D(Collision2D collision){
-        if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal)){
+        if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal) || collision.gameObject.CompareTag("Ground"))
+        {
             surfacesTouching--;
             grounded = surfacesTouching > 0;
+            canJump = true;
         }
     }
 }
