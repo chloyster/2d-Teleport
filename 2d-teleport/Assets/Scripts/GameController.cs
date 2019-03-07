@@ -27,7 +27,9 @@ public class GameController : MonoBehaviour
 
     public void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 100, 30), "Health: " + health);
-        GUI.Label(new Rect(10, 30, 100, 30), "Friends Saved: " + savedNPCs);
+        GUIStyle myStyle = new GUIStyle();
+        myStyle.fontSize = 50;
+        GUI.Label(new Rect(10, 10, 100, 30), "Health: " + health, myStyle);
+        GUI.Label(new Rect(10, 60, 100, 30), "Friends Saved: " + savedNPCs, myStyle);
     }
 }
