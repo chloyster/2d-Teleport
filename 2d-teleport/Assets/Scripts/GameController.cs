@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 
@@ -8,6 +9,10 @@ public class GameController : MonoBehaviour
 {
     //gabriella wrote...
     public static GameController control;
+
+    // HUD health stuff
+    public Slider healthSlider;
+    public Image damageImage;
 
     public float health;
     public int savedNPCs;
@@ -25,11 +30,15 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void OnGUI()
+    void Update()
     {
-        GUIStyle myStyle = new GUIStyle();
-        myStyle.fontSize = 50;
-        GUI.Label(new Rect(10, 10, 100, 30), "Health: " + health, myStyle);
-        GUI.Label(new Rect(10, 60, 100, 30), "Friends Saved: " + savedNPCs, myStyle);
+        healthSlider.value = health;
     }
+    //public void OnGUI()
+    //{
+    //    GUIStyle myStyle = new GUIStyle();
+    //    myStyle.fontSize = 50;
+    //    GUI.Label(new Rect(10, 10, 100, 30), "Health: " + health, myStyle);
+    //    GUI.Label(new Rect(10, 60, 100, 30), "Friends Saved: " + savedNPCs, myStyle);
+    //}
 }
