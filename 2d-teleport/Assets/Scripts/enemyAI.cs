@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using Pathfinding;
 
@@ -6,6 +7,8 @@ using Pathfinding;
 [RequireComponent(typeof(Seeker))]
 public class enemyAI : MonoBehaviour
 {
+
+    public Text win;
 
     //Health of enemy
     public float health;
@@ -123,6 +126,10 @@ public class enemyAI : MonoBehaviour
     {
         if(health <= 0)
         {
+            if(tag == "Boss")
+            {
+                win.gameObject.SetActive(true);
+            }
             Destroy(gameObject);
         }
     }

@@ -325,8 +325,8 @@ MonoBehaviour:
   - Bully knocked you out, but you're not done yet!
   - Keep your eye open for candy. You must keep your strength up!
   - And remember, the others need you!
-  - Use 'A' and 'D' to move, Spacebar to jump, Left Click to shoot and Right Click
-    to get you there.
+  - Use 'A' and 'D' to move, Spacebar or 'W' to jump, Left Click to shoot and Right
+    Click to get you there.
   - Get your space gun and let's go!
   typingSpeed: 0.02
   continueButton: {fileID: 1448474312}
