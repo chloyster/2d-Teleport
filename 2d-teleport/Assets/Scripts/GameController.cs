@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 
 public class GameController : MonoBehaviour
@@ -11,6 +12,7 @@ public class GameController : MonoBehaviour
 
     public float health;
     public int savedNPCs;
+    public Text win;
 
     void Awake()
     {
@@ -31,5 +33,10 @@ public class GameController : MonoBehaviour
         myStyle.fontSize = 50;
         GUI.Label(new Rect(10, 10, 100, 30), "Health: " + health, myStyle);
         GUI.Label(new Rect(10, 60, 100, 30), "Friends Saved: " + savedNPCs, myStyle);
+    }
+
+    public void youWin()
+    {
+        win.gameObject.SetActive(true);
     }
 }

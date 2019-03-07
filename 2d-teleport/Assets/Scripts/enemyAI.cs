@@ -123,6 +123,10 @@ public class enemyAI : MonoBehaviour
     {
         if(health <= 0)
         {
+            if(tag == "Boss")
+            {
+                GameController.control.youWin();
+            }
             Destroy(gameObject);
         }
     }
