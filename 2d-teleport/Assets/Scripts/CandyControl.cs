@@ -23,7 +23,10 @@ public class CandyControl : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            GameController.control.health += 2;
+            if (GameController.control.health <= 10)
+            {
+                GameController.control.health += 1;
+            }
             gameObject.SetActive(false);
         }
     }
