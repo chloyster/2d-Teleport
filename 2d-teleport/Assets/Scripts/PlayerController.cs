@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x)); //gabriella
 
-        if (Input.GetKey(KeyCode.Space) && System.Math.Abs(rb2d.velocity.y) < EPSILON && canJump)
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) && System.Math.Abs(rb2d.velocity.y) < EPSILON && canJump)
         {
             rb2d.AddForce(new Vector2(0, jumpForce));
         }
