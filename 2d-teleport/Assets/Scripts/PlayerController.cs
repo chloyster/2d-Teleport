@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private int surfacesTouching = 0;
     private float lastHealth;
 
+    //private bool isDead; //gabriella
+
     public Animator animator; //gabriella
 
     private readonly float EPSILON = 0.001f;
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         canJump = true;
+        //isDead = false; //gabriella
 
         AudioManager.instance.StopAllSounds();
 
@@ -55,6 +58,7 @@ public class PlayerController : MonoBehaviour
     {
         if (GameController.control.health <= 0)
         {
+            //isDead = true;
             AudioManager.instance.Play("Die");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             GameController.control.health = lastHealth;
@@ -110,4 +114,15 @@ public class PlayerController : MonoBehaviour
             canJump = true;
         }
     }
+
+    // gabriella additions:
+    //void Death()
+    //{
+    //    if (isDead)
+    //    {
+    //        // play a death animation
+    //        // bring up "Continue" screen, click to try again
+    //        // start player with full health?
+    //    }
+    //}
 }

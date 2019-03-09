@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CandyControl : MonoBehaviour
 {
+    // Gabriella wrote this script
     // Start is called before the first frame update
     public float speed = 2f;
     public float maxRotation = 5f;
