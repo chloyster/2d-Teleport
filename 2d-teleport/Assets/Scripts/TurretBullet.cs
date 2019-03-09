@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TurretBullet : MonoBehaviour
 {
-    public float speed = 1.0f;
-    public float lifeTime = 1.5f;
+    private float speed = 0.5f;
+    private float lifeTime = 1.5f;
 
 
     // Start is called before the first frame update

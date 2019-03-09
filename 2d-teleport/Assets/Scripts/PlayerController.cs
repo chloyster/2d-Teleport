@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private bool grounded = true;
     private bool canJump;
     private int surfacesTouching = 0;
+    private float lastHealth;
 
     public Animator animator; //gabriella
 
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
                 AudioManager.instance.Play("Theme");
                 break;
         }
+        lastHealth = GameController.control.health;
     }
 
 
@@ -55,7 +57,7 @@ public class PlayerController : MonoBehaviour
         {
             AudioManager.instance.Play("Die");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            GameController.control.health = 10;
+            GameController.control.health = lastHealth;
         }
     }
 
