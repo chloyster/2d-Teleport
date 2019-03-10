@@ -12,6 +12,7 @@ public class enemyAI : MonoBehaviour
 
     //Health of enemy
     public float health;
+    public Slider healthSlider; //gabriella added
 
     //object we are chasing
     public Transform target;
@@ -139,6 +140,7 @@ public class enemyAI : MonoBehaviour
         if (collision.gameObject.name.StartsWith("Projectile"))
         {
             health--;
+            healthSlider.value = health; //gabriella added
         }
     }
 
