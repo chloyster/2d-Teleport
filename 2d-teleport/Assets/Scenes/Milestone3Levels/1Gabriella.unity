@@ -326,7 +326,7 @@ MonoBehaviour:
   - Keep your eye open for candy. You must keep your strength up!
   - And remember, the others need you!
   - Use 'A' and 'D' to move, Spacebar or 'W' to jump, Left Click to shoot and Right
-    Click to get you there.
+    Click to teleport.
   - Get your space gun and let's go!
   typingSpeed: 0.02
   continueButton: {fileID: 1448474312}
@@ -4784,7 +4784,7 @@ PrefabInstance:
     - target: {fileID: 330996328626965083, guid: b7d70fedc566dc947a469003bb363abc,
         type: 3}
       propertyPath: health
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 330996328626965083, guid: b7d70fedc566dc947a469003bb363abc,
         type: 3}
