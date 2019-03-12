@@ -28,9 +28,6 @@ public class FallingPlatform : MonoBehaviour
         rb2d.isKinematic = false;
         boxCollider.enabled = false;
 
-        yield return new WaitForSeconds(2);
-        Destroy(gameObject);
-
         yield return 0;
     }
 }
