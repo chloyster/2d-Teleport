@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Spikes"))
         {
-            GameController.control.health-=2;
+            GameController.control.health--;
             onSpikes = true;
         }
     }
