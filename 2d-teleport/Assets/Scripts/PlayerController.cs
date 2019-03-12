@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     private bool canJump;
     private int surfacesTouching = 0;
     private float lastHealth;
+    private bool onSpikes = false;
+    private readonly float timeBetweenSpikeDmg = 0.5f;
+    private float spikeTimeElapsed;
 
     //private bool isDead; //gabriella
 
@@ -26,8 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         canJump = true;
-        //isDead = false; //gabriella
-
+        spikeTimeElapsed = timeBetweenSpikeDmg;
         AudioManager.instance.StopAllSounds();
 
         switch (SceneManager.GetActiveScene().name)
@@ -63,6 +65,21 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             GameController.control.health = lastHealth;
         }
+        else
+        {
+            if (onSpikes)
+            {
+                if (spikeTimeElapsed <= 0)
+                {
+                    GameController.control.health--;
+                    spikeTimeElapsed = timeBetweenSpikeDmg;
+                }
+                else
+                {
+                    spikeTimeElapsed -= Time.deltaTime;
+                }
+            }
+        }
     }
 
     void FixedUpdate()
@@ -95,23 +112,32 @@ public class PlayerController : MonoBehaviour
                 canJump = false;
             }
         }
+        
         if(collision.gameObject.name == "Death Zone" || collision.gameObject.name.StartsWith("enemy"))
         {
             AudioManager.instance.Play("Die");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if (collision.gameObject.name.StartsWith("bullet"))
+        else if (collision.gameObject.CompareTag("Bullet"))
         {
             GameController.control.health--;
+        }
+        else if (collision.gameObject.CompareTag("Spikes"))
+        {
+            GameController.control.health-=2;
+            onSpikes = true;
         }
     }
 
     void OnCollisionExit2D(Collision2D collision){
-        if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal) || collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal) || collision.gameObject.CompareTag("Ground")
+            || collision.gameObject.CompareTag("Spikes"))
         {
             surfacesTouching--;
             grounded = surfacesTouching > 0;
             canJump = true;
+            onSpikes = false;
+            spikeTimeElapsed = timeBetweenSpikeDmg;
         }
     }
 

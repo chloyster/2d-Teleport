@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6119984056337661909}
   m_Layer: 12
   m_Name: bullet-test
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,8 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4a5e4bdbabea2468fe69c8df2ebd0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  lifeTime: 1.5
 --- !u!58 &2156072672397674185
 CircleCollider2D:
   m_ObjectHideFlags: 0

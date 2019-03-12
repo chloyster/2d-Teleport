@@ -7,6 +7,8 @@ TagManager:
   - NPChelp
   - Ground
   - Boss
+  - Spikes
+  - Bullet
   layers:
   - Default
   - TransparentFX
