@@ -40,10 +40,14 @@ public class enemyAI : MonoBehaviour
     //the waypoint we are currently moving towards
     private int currentWaypoint = 0;
 
+    //Sprite renderer for enemy
+    private SpriteRenderer sprite;
+
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
 
         if(target == null)
         {
@@ -132,6 +136,14 @@ public class enemyAI : MonoBehaviour
                 win.gameObject.SetActive(true);
             }
             Destroy(gameObject);
+        }
+        if(target != null && target.position.x > transform.position.x)
+        {
+            sprite.flipX = true;
+        }
+        else if(target != null && target.position.x < transform.position.x)
+        {
+            sprite.flipX = false;
         }
     }
 

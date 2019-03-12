@@ -11,6 +11,7 @@ public class turretAI : MonoBehaviour
     private Transform target;
     public GameObject bullet;
     private float timer = 1.0f;
+    public Transform shotpoint;
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +24,18 @@ public class turretAI : MonoBehaviour
     {
         if (inSight && timer <= 0)
         {
-            Vector3 difference = target.transform.position - transform.position;
+            if (tag == "Boss" && target.position.x < transform.position.x)
+            {
+                shotpoint.position = new Vector3(transform.position.x - 2.712f, transform.position.y - 0.14f, 0);
+            }
+            else if (tag == "Boss" && target.position.x > transform.position.x)
+            {
+                shotpoint.position = new Vector3(transform.position.x + 2.712f, transform.position.y - 0.14f, 0);
+            }
+            Vector3 difference = target.transform.position - shotpoint.position;
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
-            GameObject turrBullet = Instantiate(bullet, transform.position, transform.rotation);
+            shotpoint.rotation = Quaternion.Euler(0f, 0f, rotZ);
+            GameObject turrBullet = Instantiate(bullet, shotpoint.position, shotpoint.rotation);
             timer = 1.0f;
         }
         timer -= Time.deltaTime;
