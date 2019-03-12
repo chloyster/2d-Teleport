@@ -206,6 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2912510597549649343}
   - component: {fileID: 5589451628310776967}
+  - component: {fileID: 3153075923043216487}
   m_Layer: 11
   m_Name: arm-with-gun
   m_TagString: Untagged
@@ -275,6 +276,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3153075923043216487
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6233274294432010971}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 99a1d7d5956414d2fab25687a3869f92, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7344933133388279335
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,3 +398,4 @@ MonoBehaviour:
     type: 3}
   lastProjectile: {fileID: 0}
   startTimeBtwShots: 0.5
+  gunAnimator: {fileID: 3153075923043216487}

@@ -15,9 +15,13 @@ public class Weapon : MonoBehaviour
     public GameObject lastProjectile;
     public float startTimeBtwShots;
 
+    public Animator gunAnimator; // Dayton
+
     // Update is called once per frame
     void Update()
     {
+        gunAnimator.SetBool("GunShot", false);
+
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
@@ -27,6 +31,7 @@ public class Weapon : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 AudioManager.instance.Play("BulletFire");
+                gunAnimator.SetBool("GunShot", true);
                 GameObject lProjectile = Instantiate(projectile, shotPoint.position, transform.rotation);
                 lProjectile.GetComponent<Projectile>().weapon = gameObject;
 
