@@ -53,20 +53,19 @@ public class CameraLookAhead : MonoBehaviour
 
         float lookAheadX = 0f;
 
+
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            lookAheadX = 10f;
+        }
+        else if (Input.GetAxis("Horizontal") < 0)
+        {
+            lookAheadX = -10f;
+        }
+
+
         // If the player has moved beyond the x margin...
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            lookAheadX = 20f;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            lookAheadX = -20f;
-        }
-
-
-
-        if (CheckXMargin())
+       if (CheckXMargin())
             // ... the target x coordinate should be a Lerp between the camera's current x position and the player's current x position.
             targetX = Mathf.Lerp(transform.position.x, player.position.x + lookAheadX, xSmooth * Time.deltaTime);
 

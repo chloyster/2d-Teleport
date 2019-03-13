@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     public float yMargin = 1f;      // Distance in the y axis the player can move before the camera follows.
     public float xSmooth = 8f;      // How smoothly the camera catches up with it's target movement in the x axis.
     public float ySmooth = 8f;      // How smoothly the camera catches up with it's target movement in the y axis.
+    private float lookAheadX = 0f;
     public Vector2 maxXAndY;        // The maximum x and y coordinates the camera can have.
     public Vector2 minXAndY;        // The minimum x and y coordinates the camera can have.
 
@@ -47,10 +48,19 @@ public class CameraFollow : MonoBehaviour
         float targetX = transform.position.x;
         float targetY = transform.position.y;
 
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            lookAheadX = 5f;
+        }
+        else if (Input.GetAxis("Horizontal") < 0)
+        {
+            lookAheadX = -5f;
+        }
+
         // If the player has moved beyond the x margin...
-        if (CheckXMargin())
+        //if (CheckXMargin())
             // ... the target x coordinate should be a Lerp between the camera's current x position and the player's current x position.
-            targetX = Mathf.Lerp(transform.position.x, player.position.x, xSmooth * Time.deltaTime);
+            targetX = Mathf.Lerp(transform.position.x, player.position.x + lookAheadX, xSmooth * Time.deltaTime);
 
         // If the player has moved beyond the y margin...
         if (CheckYMargin())
