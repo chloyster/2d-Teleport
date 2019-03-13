@@ -8225,17 +8225,17 @@ PrefabInstance:
     - target: {fileID: 3758386282959828390, guid: d94314c5a61683e4c802b90ea73c6a50,
         type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.101960786
+      value: 0.53333336
       objectReference: {fileID: 0}
     - target: {fileID: 3758386282959828390, guid: d94314c5a61683e4c802b90ea73c6a50,
         type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.023529412
+      value: 0.28235295
       objectReference: {fileID: 0}
     - target: {fileID: 3758386282959828390, guid: d94314c5a61683e4c802b90ea73c6a50,
         type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.29411766
+      value: 0.6156863
       objectReference: {fileID: 0}
     - target: {fileID: 3758386281631786776, guid: d94314c5a61683e4c802b90ea73c6a50,
         type: 3}
@@ -8910,11 +8910,6 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 750
       objectReference: {fileID: 0}
-    - target: {fileID: 4654358167388703356, guid: f46b0c7d0fd896249ac49f451ac481bc,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4654358166175279958, guid: f46b0c7d0fd896249ac49f451ac481bc,
         type: 3}
       propertyPath: player
@@ -8926,6 +8921,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6032538006333978827, guid: 6f521c0f2b7a9894f807ef5561dd02ef,
         type: 3}
+    - target: {fileID: 4654358167388703356, guid: f46b0c7d0fd896249ac49f451ac481bc,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4654358166175279959, guid: f46b0c7d0fd896249ac49f451ac481bc,
         type: 3}
       propertyPath: m_LocalPosition.y

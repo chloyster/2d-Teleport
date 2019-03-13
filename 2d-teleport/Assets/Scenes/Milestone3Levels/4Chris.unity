@@ -46923,6 +46923,21 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 12.85
       objectReference: {fileID: 0}
+    - target: {fileID: 3758386282959828390, guid: d94314c5a61683e4c802b90ea73c6a50,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758386282959828390, guid: d94314c5a61683e4c802b90ea73c6a50,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758386282959828390, guid: d94314c5a61683e4c802b90ea73c6a50,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.6156863
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d94314c5a61683e4c802b90ea73c6a50, type: 3}
 --- !u!1001 &306252871
@@ -47635,6 +47650,27 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 394094529}
+    - target: {fileID: 4565529985232024420, guid: 7316e6f2e4307c4458c4086898b54db0,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b99603cf25427194baba505c10bec81d,
+        type: 3}
+    - target: {fileID: 4565529985232024420, guid: 7316e6f2e4307c4458c4086898b54db0,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565529985232024421, guid: 7316e6f2e4307c4458c4086898b54db0,
+        type: 3}
+      propertyPath: m_Radius
+      value: 10.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565529985232024421, guid: 7316e6f2e4307c4458c4086898b54db0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.13
+      objectReference: {fileID: 0}
     - target: {fileID: 4565529985232024422, guid: 7316e6f2e4307c4458c4086898b54db0,
         type: 3}
       propertyPath: m_GravityScale
@@ -47679,27 +47715,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 25.499998
-      objectReference: {fileID: 0}
-    - target: {fileID: 4565529985232024420, guid: 7316e6f2e4307c4458c4086898b54db0,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b99603cf25427194baba505c10bec81d,
-        type: 3}
-    - target: {fileID: 4565529985232024420, guid: 7316e6f2e4307c4458c4086898b54db0,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4565529985232024421, guid: 7316e6f2e4307c4458c4086898b54db0,
-        type: 3}
-      propertyPath: m_Radius
-      value: 10.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 4565529985232024421, guid: 7316e6f2e4307c4458c4086898b54db0,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 1.13
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4565529985232024421, guid: 7316e6f2e4307c4458c4086898b54db0, type: 3}
