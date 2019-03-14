@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private bool onSpikes = false;
     private readonly float timeBetweenSpikeDmg = 0.5f;
     private float spikeTimeElapsed;
+    public bool justTeleported;
 
     //private bool isDead; //gabriella
 
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         canJump = true;
+        justTeleported = false;
         spikeTimeElapsed = timeBetweenSpikeDmg;
         AudioManager.instance.StopAllSounds();
 
@@ -95,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x)); //gabriella
 
-        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) && System.Math.Abs(rb2d.velocity.y) < EPSILON && canJump)
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) && System.Math.Abs(rb2d.velocity.y) < EPSILON && canJump && !justTeleported)
         {
             rb2d.AddForce(new Vector2(0, jumpForce));
         }
@@ -111,6 +113,7 @@ public class PlayerController : MonoBehaviour
             if(contactPoint.y < center.y){
                 canJump = false;
             }
+            justTeleported = false;
         }
         
         if(collision.gameObject.name == "Death Zone" || collision.gameObject.name.StartsWith("enemy"))

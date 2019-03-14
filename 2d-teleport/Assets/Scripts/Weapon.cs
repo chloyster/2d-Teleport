@@ -77,6 +77,7 @@ public class Weapon : MonoBehaviour
                 {
                     float xVel = playerrb.velocity.x;
                     playerrb.velocity = new Vector2(xVel, 0);
+                    player.GetComponent<PlayerController>().justTeleported = true;
                 }
                 lastProjectile.GetComponent<Projectile>().DestroyProjectile();
             }
