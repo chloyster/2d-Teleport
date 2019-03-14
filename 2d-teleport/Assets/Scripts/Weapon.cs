@@ -49,7 +49,7 @@ public class Weapon : MonoBehaviour
                 if (lastProjectile != null)
                 {
                     AudioManager.instance.Play("TP");
-                    StartCoroutine(cameraShake.Shake(.05f, .2f));
+                    StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
                     player.transform.position = lastProjectile.transform.position;
                     Rigidbody2D playerrb = player.GetComponent<Rigidbody2D>();
                     if (playerrb.velocity.y < 0)
@@ -70,7 +70,7 @@ public class Weapon : MonoBehaviour
             if (lastProjectile != null)
             {
                 AudioManager.instance.Play("TP");
-                StartCoroutine(cameraShake.Shake(.05f, .2f));
+                StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
                 player.transform.position = lastProjectile.transform.position;
                 Rigidbody2D playerrb = player.GetComponent<Rigidbody2D>();
                 if (playerrb.velocity.y < 0)

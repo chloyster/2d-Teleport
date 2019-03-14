@@ -918,7 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8eef8d8a74474c58a02d73e4f0f4bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnitude: 0
+  magnitude: 100
 --- !u!81 &508041950
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2140,7 +2140,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cameraShake
       value: 
-      objectReference: {fileID: 508041949}
+      objectReference: {fileID: 0}
     - target: {fileID: 4654358167388703356, guid: f46b0c7d0fd896249ac49f451ac481bc,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -2156,6 +2156,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7958281589479071295, guid: f46b0c7d0fd896249ac49f451ac481bc,
+        type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 508041949}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f46b0c7d0fd896249ac49f451ac481bc, type: 3}
 --- !u!4 &997733152 stripped

@@ -47027,6 +47027,11 @@ PrefabInstance:
       propertyPath: cameraShake
       value: 
       objectReference: {fileID: 521753822}
+    - target: {fileID: 7958281589479071295, guid: f46b0c7d0fd896249ac49f451ac481bc,
+        type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 521753822}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f46b0c7d0fd896249ac49f451ac481bc, type: 3}
 --- !u!1 &377093346
@@ -47661,16 +47666,6 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4565529985232024421, guid: 7316e6f2e4307c4458c4086898b54db0,
-        type: 3}
-      propertyPath: m_Radius
-      value: 10.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 4565529985232024421, guid: 7316e6f2e4307c4458c4086898b54db0,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 1.13
-      objectReference: {fileID: 0}
     - target: {fileID: 4565529985232024422, guid: 7316e6f2e4307c4458c4086898b54db0,
         type: 3}
       propertyPath: m_GravityScale
@@ -47715,6 +47710,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 25.499998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565529985232024421, guid: 7316e6f2e4307c4458c4086898b54db0,
+        type: 3}
+      propertyPath: m_Radius
+      value: 10.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 4565529985232024421, guid: 7316e6f2e4307c4458c4086898b54db0,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.13
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4565529985232024421, guid: 7316e6f2e4307c4458c4086898b54db0, type: 3}
