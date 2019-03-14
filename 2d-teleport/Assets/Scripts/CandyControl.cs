@@ -27,9 +27,9 @@ public class CandyControl : MonoBehaviour
             if (GameController.control.health <= 10)
             {
                 GameController.control.health += 1;
-                AudioManager.instance.Play("RescuedKid");
+                AudioManager.instance.Play("GetCandy");
+                gameObject.SetActive(false);
             }
-            gameObject.SetActive(false);
         }
     }
 }

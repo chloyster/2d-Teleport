@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
                 break;
             case "4Chris":
                 AudioManager.instance.Play("FinalBossTheme");
+                AudioManager.instance.Play("EvilLaugh");
                 break;
             default:
                 AudioManager.instance.Play("Theme");
@@ -74,6 +75,7 @@ public class PlayerController : MonoBehaviour
                 if (spikeTimeElapsed <= 0)
                 {
                     GameController.control.health--;
+                    AudioManager.instance.Play("TakeDamage");
                     spikeTimeElapsed = timeBetweenSpikeDmg;
                 }
                 else
@@ -124,10 +126,12 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.CompareTag("Bullet"))
         {
             GameController.control.health--;
+            AudioManager.instance.Play("TakeDamage");
         }
         else if (collision.gameObject.CompareTag("Spikes"))
         {
             GameController.control.health--;
+            AudioManager.instance.Play("TakeDamage");
             onSpikes = true;
         }
     }

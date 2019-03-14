@@ -110,10 +110,55 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: FinalBossTheme
     clip: {fileID: 8300000, guid: 6dd0ce0954bf9432da7c177fe3ec3fa6, type: 3}
-    volume: 0.2
+    volume: 0.14
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
     loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: TakeDamage
+    clip: {fileID: 8300000, guid: faa2cc1e2c46544129358f631b2540a0, type: 3}
+    volume: 0.23
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: GetCandy
+    clip: {fileID: 8300000, guid: 0b016918c74a746c7a3f6f47b00cd01e, type: 3}
+    volume: 0.26
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: TelePad
+    clip: {fileID: 8300000, guid: c261d7e16adae424f9f940dcd31d241b, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: EvilLaugh
+    clip: {fileID: 8300000, guid: 0ece47c5ac45a41fd81af01e4e41858e, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: DealDamage
+    clip: {fileID: 8300000, guid: 4ee75f37f9592ad48a409f847b619779, type: 3}
+    volume: 0.35
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}

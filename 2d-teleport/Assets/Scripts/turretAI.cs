@@ -36,6 +36,7 @@ public class turretAI : MonoBehaviour
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             shotpoint.rotation = Quaternion.Euler(0f, 0f, rotZ);
             GameObject turrBullet = Instantiate(bullet, shotpoint.position, shotpoint.rotation);
+            AudioManager.instance.Play("BulletFire");
             timer = 1.0f;
         }
         timer -= Time.deltaTime;
@@ -52,6 +53,7 @@ public class turretAI : MonoBehaviour
         if (collision.gameObject.name.StartsWith("Projectile"))
         {
             health--;
+            AudioManager.instance.Play("DealDamage");
         }
     }
 

@@ -152,6 +152,7 @@ public class enemyAI : MonoBehaviour
         if (collision.gameObject.name.StartsWith("Projectile"))
         {
             health--;
+            AudioManager.instance.Play("DealDamage");
             healthSlider.value = health; //gabriella added
         }
     }
