@@ -13,6 +13,8 @@ public class Dialogue : MonoBehaviour
     public float typingSpeed;
     private int index;
 
+
+
     public GameObject continueButton;
     public GameObject player;
     public GameObject wakeAnim;
@@ -32,6 +34,7 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator Type()
     {
+        AudioManager.instance.Play("Bear" + ((index % 3) + 1));
         foreach (char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;

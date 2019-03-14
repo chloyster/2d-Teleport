@@ -162,3 +162,30 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: Bear1
+    clip: {fileID: 8300000, guid: 9852c2f6261c04b878b6dac49e0534ec, type: 3}
+    volume: 0.35
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Bear2
+    clip: {fileID: 8300000, guid: 2eed79a5f7daa444fa24db7f9c777f8b, type: 3}
+    volume: 0.35
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Bear3
+    clip: {fileID: 8300000, guid: 8ad75af2944654ac3ac7aa5c180ba3a0, type: 3}
+    volume: 0.35
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}

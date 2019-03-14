@@ -262,6 +262,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatform (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: c7bce82a85a004836842bc654073a3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: c7bce82a85a004836842bc654073a3dc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -489,6 +494,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatform (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: c7bce82a85a004836842bc654073a3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: c7bce82a85a004836842bc654073a3dc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -710,6 +720,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MovingPlatform (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: c7bce82a85a004836842bc654073a3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: c7bce82a85a004836842bc654073a3dc,
         type: 3}
@@ -1039,6 +1054,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatform (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: c7bce82a85a004836842bc654073a3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: c7bce82a85a004836842bc654073a3dc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1147,6 +1167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Jump_1_Static
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: c7bce82a85a004836842bc654073a3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: c7bce82a85a004836842bc654073a3dc,
         type: 3}
@@ -7915,6 +7940,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatform (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: c7bce82a85a004836842bc654073a3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: c7bce82a85a004836842bc654073a3dc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8008,6 +8038,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SecretPlat_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: c7bce82a85a004836842bc654073a3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: c7bce82a85a004836842bc654073a3dc,
         type: 3}
@@ -8345,6 +8380,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatform (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: c7bce82a85a004836842bc654073a3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: c7bce82a85a004836842bc654073a3dc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8647,6 +8687,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TiledMovingPlatform2x1
       objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: 6ab0cacb569ca486ea4943a78732f3c4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: 6ab0cacb569ca486ea4943a78732f3c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8730,6 +8775,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MovingPlatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: c7bce82a85a004836842bc654073a3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: c7bce82a85a004836842bc654073a3dc,
         type: 3}
@@ -8910,6 +8960,11 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 750
       objectReference: {fileID: 0}
+    - target: {fileID: 4654358167388703356, guid: f46b0c7d0fd896249ac49f451ac481bc,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4654358166175279958, guid: f46b0c7d0fd896249ac49f451ac481bc,
         type: 3}
       propertyPath: player
@@ -8921,11 +8976,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6032538006333978827, guid: 6f521c0f2b7a9894f807ef5561dd02ef,
         type: 3}
-    - target: {fileID: 4654358167388703356, guid: f46b0c7d0fd896249ac49f451ac481bc,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4654358166175279959, guid: f46b0c7d0fd896249ac49f451ac481bc,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -8964,6 +9014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MovingPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: c7bce82a85a004836842bc654073a3dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: c7bce82a85a004836842bc654073a3dc,
         type: 3}
@@ -9058,6 +9113,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TiledMovingPlatform2x1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341181447986328574, guid: 6ab0cacb569ca486ea4943a78732f3c4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4341181447986328560, guid: 6ab0cacb569ca486ea4943a78732f3c4,
         type: 3}
