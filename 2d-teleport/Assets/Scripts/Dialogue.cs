@@ -5,14 +5,13 @@ using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
-    // Gabriella wrote:
+    // Gabriella wrote this script
 
     public Text textDisplay;
     public string[] sentences;
 
     public float typingSpeed;
     private int index;
-
 
 
     public GameObject continueButton;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class IntroSceneManager : MonoBehaviour
 {
 
-    // gabriella wrote this...
+    // gabriella wrote this script
 
     public GameObject dialogueManager;
     public Animator wakeUpanim;
@@ -19,7 +19,4 @@ public class IntroSceneManager : MonoBehaviour
     {
         dialogueManager.SetActive(true);
     }
-
-    //note: try animating the character to stand up, then play the dialogue,
-    //      then set the player to active, then let them run
 }
