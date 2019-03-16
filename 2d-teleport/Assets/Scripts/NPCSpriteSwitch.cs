@@ -5,6 +5,7 @@ using UnityEngine;
 //Gabriella
 public class NPCSpriteSwitch : MonoBehaviour
 {
+    //Gabriella wrote this script
     public Sprite sprite1; // Drag your first sprite here
     public Sprite sprite2; // Drag your second sprite here
 

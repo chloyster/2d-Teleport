@@ -7,7 +7,7 @@ using System;
 
 public class GameController : MonoBehaviour
 {
-    //gabriella wrote...
+    //gabriella wrote this script
     public static GameController control;
 
     // HUD health stuff
