@@ -18,6 +18,8 @@ public class Dialogue : MonoBehaviour
     public GameObject player;
     public GameObject wakeAnim;
 
+    public bool skippedIntro;
+
     void Update()
     {
         if (textDisplay.text == sentences[index])
@@ -29,6 +31,7 @@ public class Dialogue : MonoBehaviour
     void Start()
     {
         StartCoroutine(Type());
+        skippedIntro = false;
     }
 
     IEnumerator Type()
@@ -41,10 +44,15 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+    public void SkipIntro()
+    {
+        skippedIntro = true;
+    }
+
     public void NextSentence()
     {
         continueButton.SetActive(false);
-        if (index < sentences.Length - 1)
+        if (index < sentences.Length - 1 && skippedIntro == false)
         {
             index++;
             textDisplay.text = "";

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GabriellaScene2.unity
     guid: dba9f1d73196fc8468f3c890613060e7
+  - enabled: 1
+    path: Assets/Scenes/Milestone3Levels/MainMenu.unity
+    guid: d374ed8d184447a46ac0ece3a7c05479
   m_configObjects: {}
