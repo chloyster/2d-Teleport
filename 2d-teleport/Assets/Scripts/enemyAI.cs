@@ -3,6 +3,11 @@ using UnityEngine.UI;
 using System.Collections;
 using Pathfinding;
 
+
+
+//By Chris Gix
+
+
 [RequireComponent (typeof (Rigidbody2D))]
 [RequireComponent(typeof(Seeker))]
 public class enemyAI : MonoBehaviour

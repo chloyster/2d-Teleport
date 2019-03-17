@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//By Chris Gix
+
+
 public class TurretBullet : MonoBehaviour
 {
     private float speed = 0.5f;

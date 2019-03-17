@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //From "2D Platformer" tutorial in the Asset Store, published by Unity themselves
+
+//Worked on by everyone in team
+
 public class PlayerController : MonoBehaviour
 {
 
