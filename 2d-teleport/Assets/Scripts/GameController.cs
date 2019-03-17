@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public static GameController control;
 
     // HUD health stuff
+    public Text maxHealthText;
     public Slider healthSlider;
     public Image damageImage;
 
@@ -34,6 +35,8 @@ public class GameController : MonoBehaviour
     void Update()
     {
         healthSlider.value = health;
+        maxHealthText.text = health.ToString() + "/" + maxHealth.ToString();
+
     }
     //public void OnGUI()
     //{
