@@ -24,7 +24,7 @@ public class CandyControl : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (GameController.control.health <= 10)
+            if (GameController.control.health <= GameController.control.maxHealth)
             {
                 GameController.control.health += 1;
                 AudioManager.instance.Play("GetCandy");

@@ -35,6 +35,7 @@ public class NPCSpriteSwitch : MonoBehaviour
         {
             playerFound = true;
             AudioManager.instance.Play("RescuedKid");
+            GameController.control.maxHealth += 2;
             //foundSound.Play();
         }
     }

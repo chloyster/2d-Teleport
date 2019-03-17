@@ -6714,6 +6714,11 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 107161477}
+    - target: {fileID: 330996328626965083, guid: b7d70fedc566dc947a469003bb363abc,
+        type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7d70fedc566dc947a469003bb363abc, type: 3}
 --- !u!1001 &7988021013664681846

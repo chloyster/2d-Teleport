@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public Slider healthSlider;
     public Image damageImage;
 
+    public float maxHealth;
     public float health;
     public int savedNPCs;
 
