@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     private readonly float timeBetweenSpikeDmg = 0.5f;
     private float spikeTimeElapsed;
     public bool justTeleported;
+    public bool haungsMode = false; //Vernon
+
 
     //private bool isDead; //gabriella
 
@@ -96,6 +98,13 @@ public class PlayerController : MonoBehaviour
         //Vector2 movement = new Vector2(moveHorizontal, 0);
         //rb2d.AddForce(movement * speed);
 
+        //haungs mode - player pressed "h"
+        //By Vernon
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            haungsMode = !haungsMode;
+        }
+
         //new left/right movement
         float h = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(h * strafeSpeed, rb2d.velocity.y);
@@ -106,7 +115,17 @@ public class PlayerController : MonoBehaviour
         {
             rb2d.AddForce(new Vector2(0, jumpForce));
         }
-        rb2d.AddForce(new Vector2(0, -extraGravity));
+
+        //By Vernon
+        if (haungsMode == false)
+        {
+            rb2d.AddForce(new Vector2(0, -extraGravity));
+
+        }
+        else
+        {
+            rb2d.AddForce(new Vector2(0, 9.8f));
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision){
