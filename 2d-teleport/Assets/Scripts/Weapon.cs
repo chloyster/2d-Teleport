@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//By Dayton
 public class Weapon : MonoBehaviour
 {
     public float offset;

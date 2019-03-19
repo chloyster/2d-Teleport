@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//By Dayton
 public class Projectile : MonoBehaviour
 {
     public float speed = 1.0f;

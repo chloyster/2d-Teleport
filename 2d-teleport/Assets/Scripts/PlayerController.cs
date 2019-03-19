@@ -140,7 +140,7 @@ public class PlayerController : MonoBehaviour
             justTeleported = false;
         }
         
-        if(collision.gameObject.name == "Death Zone" || collision.gameObject.name.StartsWith("enemy"))
+        if(collision.gameObject.name == "Death Zone")
         {
             AudioManager.instance.Play("Die");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
             GameController.control.health--;
             AudioManager.instance.Play("TakeDamage");
         }
-        else if (collision.gameObject.CompareTag("Spikes"))
+        else if (collision.gameObject.CompareTag("Spikes") || collision.gameObject.name.StartsWith("enemy"))
         {
             GameController.control.health--;
             AudioManager.instance.Play("TakeDamage");

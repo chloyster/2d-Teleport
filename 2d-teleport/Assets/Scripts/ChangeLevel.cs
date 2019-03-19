@@ -7,10 +7,15 @@ public class ChangeLevel : MonoBehaviour
 {
     // gabriella wrote this script
     public int sceneToLoad;
-    void OnCollisionEnter2D(Collision2D gameObjectInformation)
+
+    IEnumerator OnCollisionEnter2D(Collision2D gameObjectInformation)
     {
         if (gameObjectInformation.gameObject.tag == "Player")
         {
+            AudioManager.instance.Play("TelePad");
+
+            yield return new WaitForSecondsRealtime(2.85f);
+
             SceneManager.LoadScene(sceneToLoad);
         }
     }
