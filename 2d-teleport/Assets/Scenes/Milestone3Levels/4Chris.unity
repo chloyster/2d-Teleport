@@ -47897,7 +47897,7 @@ PrefabInstance:
     - target: {fileID: 4565529985232024416, guid: 7316e6f2e4307c4458c4086898b54db0,
         type: 3}
       propertyPath: health
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4565529985232024416, guid: 7316e6f2e4307c4458c4086898b54db0,
         type: 3}
@@ -50120,7 +50120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6f899d2e14a4a4b9489d699e29be4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 40
   bullet: {fileID: 1925483562532093182, guid: b964e992e5381934eb0b99d50bfe343b, type: 3}
   shotpoint: {fileID: 75012181}
 --- !u!60 &1713079638
