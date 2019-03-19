@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// This script was written by Vernon.
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
