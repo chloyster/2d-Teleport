@@ -109,23 +109,23 @@ public class PlayerController : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         rb2d.velocity = new Vector2(h * strafeSpeed, rb2d.velocity.y);
 
-        animator.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x)); //gabriella
-
-        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) && System.Math.Abs(rb2d.velocity.y) < EPSILON && canJump && !justTeleported)
+        if (haungsMode)
         {
-            rb2d.AddForce(new Vector2(0, jumpForce));
-        }
-
-        //By Vernon
-        if (haungsMode == false)
-        {
-            rb2d.AddForce(new Vector2(0, -extraGravity));
-
+            float v = Input.GetAxis("Vertical");
+            rb2d.velocity = new Vector2(rb2d.velocity.x, v * strafeSpeed);
         }
         else
         {
-            rb2d.AddForce(new Vector2(0, 9.8f));
+            animator.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x)); //gabriella
+
+            if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) && System.Math.Abs(rb2d.velocity.y) < EPSILON && canJump && !justTeleported)
+            {
+                rb2d.AddForce(new Vector2(0, jumpForce));
+            }
+
+            rb2d.AddForce(new Vector2(0, -extraGravity));
         }
+
     }
 
     void OnCollisionEnter2D(Collision2D collision){
