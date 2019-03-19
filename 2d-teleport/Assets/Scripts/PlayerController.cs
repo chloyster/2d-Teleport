@@ -160,7 +160,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision){
         if (collision.gameObject.name.StartsWith("Ground", System.StringComparison.Ordinal) || collision.gameObject.CompareTag("Ground")
-            || collision.gameObject.CompareTag("Spikes"))
+            || collision.gameObject.CompareTag("Spikes") || collision.gameObject.name.StartsWith("enemy"))
         {
             surfacesTouching--;
             grounded = surfacesTouching > 0;
